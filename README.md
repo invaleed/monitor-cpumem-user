@@ -17,7 +17,9 @@ Using command "top"
 
 ```bash
 # name=utop
+
 # mkdir -p /usr/local/etc/$name
+
 # cat >/usr/local/etc/$name/.toprc <<\EOF
 RCfile for "top with windows"       # shameless braggin'
 Id:a, Mode_altscr=0, Mode_irixps=0, Delay_time=3.000, Curwin=0
@@ -47,7 +49,8 @@ HOME=/usr/local/etc/$name top -bn1 | awk '
   }
 ' | column -ts@ | sort -rnk2
 EOF
-chmod +x /usr/local/bin/$name
+
+#chmod +x /usr/local/bin/$name
 ```
 ```bash
 # utop
