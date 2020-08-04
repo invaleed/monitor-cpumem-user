@@ -58,3 +58,4 @@ influxdb:  0.0% of total CPU,  30.5% of total MEM
 grafana:   0.0% of total CPU,  5.6% of total MEM
 ```
 
+Source : https://access.redhat.com/solutions/239483
