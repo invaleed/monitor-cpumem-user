@@ -16,9 +16,9 @@ grafana:   0.0% of total CPU,  5.5% of total MEM   (0.05 GiB used)
 Using command "top"
 
 ```bash
-name=utop
-mkdir -p /usr/local/etc/$name
-cat >/usr/local/etc/$name/.toprc <<\EOF
+# name=utop
+# mkdir -p /usr/local/etc/$name
+# cat >/usr/local/etc/$name/.toprc <<\EOF
 RCfile for "top with windows"       # shameless braggin'
 Id:a, Mode_altscr=0, Mode_irixps=0, Delay_time=3.000, Curwin=0
 Def fieldscur=aEhioqtwKNmbcdfgjplrsuvyzx
@@ -34,10 +34,10 @@ Usr fieldscur=ABDECGfhijlopqrstuvyzMKNWX
     winflags=62777, sortindx=4, maxtasks=0
     summclr=3, msgsclr=3, headclr=2, taskclr=3
 EOF
-echo "$name's .toprc config file is in this dir" >/usr/local/etc/$name/README
+# echo "$name's .toprc config file is in this dir" >/usr/local/etc/$name/README
 ```
 ```bash
-cat >/usr/local/bin/$name <<EOF
+# cat >/usr/local/bin/$name <<EOF
 #!/bin/bash
 HOME=/usr/local/etc/$name top -bn1 | awk '
   NR>2 && NF>0 { pCPU[\$1]+=\$2 ; pMEM[\$1]+=\$3 }
